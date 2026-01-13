@@ -1,5 +1,5 @@
 - name: ping the server
-  hosts: catalogue  # which server we want to connect
+  hosts: 172.31.16.32  # which server we want to connect
   tasks:
     - name: ping
       ansible.builtin.ping:
