@@ -1,6 +1,6 @@
 - name: nginx install and start
   hosts: localhost
-  task:
+  tasks:
   - name: install nginx
     ansible.builtin.yum:
       name: nginx
