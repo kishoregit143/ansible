@@ -1,6 +1,6 @@
 - name: play level varibles
-  hosts: local
-  connection: local
+  hosts: localhost
+  connection: localhost
   vars:
    COURSE: devops
    TRAINEE: kishore
