@@ -1,5 +1,5 @@
 - name: ping the server
-  hosts: 34.234.90.74  # which server we want to connect
+  hosts: frontend  # which server we want to connect
   tasks:
     - name: ping
       ansible.builtin.ping:
