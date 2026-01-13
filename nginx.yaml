@@ -1,6 +1,7 @@
 - name: nginx install and start
-  hosts: localhost
-  become: yes
+  hosts: frontend
+  become: yes    # it useto run the commands with sudo privilege like from root user
+  #list of tasks to be executed under this tasks
   tasks:
   - name: install nginx
     ansible.builtin.yum:
