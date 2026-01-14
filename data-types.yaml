@@ -12,7 +12,7 @@
    concepts: # data type dictionary or map
      cloud: aws
      cm: ansible
-   tasks:
-    - name: print the data types
-      ansible.builtin.debug:
-        msg: "Course name: {{ Course }}, Duration: {{ DOURATION }}, is it live?: {{ is_live }}, tools are: {{ tools }} concepts are: {{ concepts }}"
+  tasks:
+  - name: print the data types
+    ansible.builtin.debug:
+     msg: "Course name: {{ Course }}, Duration: {{ DOURATION }}, is it live?: {{ is_live }}, tools are: {{ tools }} concepts are: {{ concepts }}"
