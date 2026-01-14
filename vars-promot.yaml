@@ -1,0 +1,11 @@
+- name: varible promot
+  hosts: localhost
+  connection: local
+  vars_promot:
+    - name: username
+      promot: what is your username
+      private: false
+  tasks:
+    - name: print the username
+      ansible.builtin.debug:
+        msg: "hello {{ username }}"   
