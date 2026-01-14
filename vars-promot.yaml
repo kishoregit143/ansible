@@ -1,9 +1,9 @@
 - name: varible promot
   hosts: localhost
   connection: local
-  vars_promot:
+  vars_prompt:
   - name: username
-    promot: what is your username
+    prompt: what is your username
     private: false
   tasks:
   - name: print the username
