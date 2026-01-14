@@ -1,5 +1,5 @@
 - name: data types
-  hosts: localhost
+  hosts: local
   connection: local
   vars:
    course: devops with aws # data type string
@@ -15,9 +15,4 @@
    tasks:
     - name: print the data types
       ansible.builtin.debug:
-        msg: |
-          course is {{ course }} and its type is {{ course | type_debug }}
-          DOURATION is {{ DOURATION }} and its type is {{ DOURATION | type_debug }}
-          is_live is {{ is_live }} and its type is {{ is_live | type_debug }}
-          tools are {{ tools }} and its type is {{ tools | type_debug }}
-          concepts are {{ concepts }} and its type is {{ concepts | type_debug }}   
+        msg: "Course name: {{ Course }}, Duration: {{ DOURATION }}, is it live?: {{ is_live }}, tools are: {{ tools }} concepts are: {{ concepts }}"
