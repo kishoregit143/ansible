@@ -1,0 +1,23 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+   course: devops with aws # data type string
+   DOURATION: 10 # data type integer
+   is_live: true # data type boolean
+   tools: #["ansible", "docker", "kubernetes"] # data type list
+    - ansible
+    - docker
+    - kubernetes
+   concepts: # data type dictionary or map
+     cloud: aws
+     cm: ansible
+   tasks:
+    - name: print the data types
+      ansible.builtin.debug:
+        msg: |
+          course is {{ course }} and its type is {{ course | type_debug }}
+          DOURATION is {{ DOURATION }} and its type is {{ DOURATION | type_debug }}
+          is_live is {{ is_live }} and its type is {{ is_live | type_debug }}
+          tools are {{ tools }} and its type is {{ tools | type_debug }}
+          concepts are {{ concepts }} and its type is {{ concepts | type_debug }}   
