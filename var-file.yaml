@@ -1,7 +1,7 @@
 - name: play level varibles
   hosts: localhost
   connection: local
-  var-file:
+  vars_files:
   - course.yaml
   tasks:
     - name: print the course info
