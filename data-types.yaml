@@ -1,6 +1,6 @@
 - name: data types
-  hosts: local
-  connections: local
+  hosts: localhost
+  connection: local
   vars:
    course: devops with aws # data type string
    DOURATION: 10 # data type integer
