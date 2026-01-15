@@ -1,12 +1,12 @@
 - name: conditions
-  host: local
+  hosts: local
   connection: local
   vars:
     number: 5
 
   tasks:
    - name: chekc if number is less then or nodeport
-     ansible.built.debug:
+     ansible.builtin.debug:
        msg: "given number {{ number}} is less then 10"
      when : number < 10   
 
