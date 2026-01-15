@@ -1,15 +1,16 @@
 - name: check the facts
   hosts: local
   connection: local
-  tasks:
-   - name: chekcing facts for testing
-     ansible.builtin.dnf:
-      name: nginx
-      state: latest
-     when: ansible_os_family == "RedHat"  # use ansible_ while refering the facts
 
-   - name: install the nginx if OS is RedHat
-     ansible.builtin.apt:
-     name: nginx
-     state: latest
-     when: ansible_os_family == "Debian"
+  tasks:
+    - name: install nginx on RedHat family
+      ansible.builtin.dnf:
+        name: nginx
+        state: latest
+      when: ansible_os_family == "RedHat"
+
+    - name: install nginx on Debian family
+      ansible.builtin.apt:
+        name: nginx
+        state: latest
+      when: ansible_os_family == "Debian"
