@@ -3,7 +3,7 @@
   connections: local
   tasks:
    - name: chekcing facts for testing
-     ansible.bultin.dnf:
+     ansible.builtin.dnf:
       name: nginx
       state: latest
   when: ansible_os_family == "RedHat"  # use ansible_ while refering the facts
