@@ -5,6 +5,7 @@
   - name: install the packages using loop at time
     ansible.builtin.package:
        name: "{{ iteam }}"
+       state: latest
     loop:
       - nginx
       - mysql
