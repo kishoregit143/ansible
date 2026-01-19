@@ -2,19 +2,17 @@
   hosts: local
   connection: local
   vars:
-   technologies: devops, linux,python, ansible
+   technologies: "devops, linux,python, ansible"
   tasks:
   - name: default varibles
     ansible.builtin.debug:
-     msg: " hello {{ name | default('ramesh') }}"
+     msg: "hello {{ name | default('ramesh') }}"
 
  #string to list
   - name: convert to string
     ansible.builtin.debug:
-     msg: " hello :  {{ technologies | split ( ',') }}"  
+     msg: "hello :  {{ technologies | split (',') }}"  
 
   - name: convert map to list
     ansible.builtin.debug:
       msg: "hello are: {{ tags | dict2items }}" 
-
-    
