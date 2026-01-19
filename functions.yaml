@@ -11,10 +11,10 @@
  #string to list
   - name: convert to string
     ansible.builtin.debug:
-     msg: " technologies are :  {{ technologies | split ( ',') }}"  
+     msg: " hello :  {{ technologies | split ( ',') }}"  
 
   - name: convert map to list
     ansible.builtin.debug:
-      msg: "Tags are: {{ tags | dict2items }}" 
+      msg: "hello are: {{ tags | dict2items }}" 
 
     
