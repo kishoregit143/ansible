@@ -5,7 +5,7 @@
   - name: print the loop
     ansible.builtin.debug:
        msg: "hello {{item}}" # iteam is reserved 
-    loop:
+    loops:
       - ramesh
       - kishore
       - mokshi
