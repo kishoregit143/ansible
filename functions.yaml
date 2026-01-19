@@ -1,18 +1,25 @@
 - name: functions
   hosts: local
   connection: local
+  gather_facts: no
+
   vars:
-   technologies: "devops, linux,python, ansible"
+    technologies: "devops, linux,python, ansible"
+    tags:
+      env: prod
+      app: payments
+
   tasks:
-  - name: default varibles
-    ansible.builtin.debug:
-     msg: "hello {{ name | default('ramesh') }}"
+    - name: default variables
+      ansible.builtin.debug:
+        msg: "hello {{ name | default('ramesh') }}"
 
- #string to list
-  - name: convert to string
-    ansible.builtin.debug:
-     msg: "hello :  {{ technologies | split (',') }}"  
+    # string to list
+    - name: convert string to list
+      ansible.builtin.debug:
+        msg: "hello : {{ technologies | split(',') }}"
 
-  - name: convert map to list
-    ansible.builtin.debug:
-      msg: "hello are: {{ tags | dict2items }}" 
+    # map (dict) to list
+    - name: convert map to list
+      ansible.builtin.debug:
+        msg: "hello are: {{ tags | dict2items }}"
