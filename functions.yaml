@@ -1,5 +1,5 @@
 - name: functions
-  host: local
+  hosts: local
   connection: local
   vars:
    technologies: devops, linux,python, ansible
@@ -11,6 +11,6 @@
  #string to list
   - name: convert to string
     ansible.builtin.debug:
-     msg: " hello {{ technologies | split ( , ) }}"    
+     msg: " hello {{ technologies | split ( ' , ') }}"    
 
     
