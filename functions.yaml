@@ -11,7 +11,7 @@
  #string to list
   - name: convert to string
     ansible.builtin.debug:
-     msg: " technologies are :  {{ technologies | split ( ' , ') }}"  
+     msg: " technologies are :  {{ technologies | split ( ',') }}"  
 
   - name: convert map to list
     ansible.builtin.debug:
